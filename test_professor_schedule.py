@@ -43,7 +43,6 @@ class TestProfessorSchedule(unittest.TestCase):
         self.assertEqual(result['periodo'], "integral")
         self.assertEqual(result['sala'], "3")
 
-    # Verifica se 
     def test_predio_for_edge_sala_5(self):
         ps = ProfessorSchedule(self.valid_data)
         self.assertEqual(ps.get_predio("5"), 1)
