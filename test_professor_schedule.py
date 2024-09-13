@@ -22,22 +22,18 @@ class TestProfessorSchedule(unittest.TestCase):
 
     # Testes de sucesso
 
-    # Verifica se retorna o prédio correto (1) para salas numeradas de 1 a 5
     def test_predio_correct_for_sala_1_to_5(self):
         ps = ProfessorSchedule(self.valid_data)
         self.assertEqual(ps.get_predio("3"), 1) 
 
-    # Verifica se retorna o prédio correto (2) para salas numeradas de 6 a 10
     def test_predio_correct_for_sala_6_to_10(self):
         ps = ProfessorSchedule(self.valid_data)
         self.assertEqual(ps.get_predio("7"), 2)
 
-    # Verifica se retorna o prédio correto para salas acima de 10
     def test_predio_correct_for_sala_above_10(self):
         ps = ProfessorSchedule(self.valid_data)
         self.assertEqual(ps.get_predio("12"), 3)
 
-    # Verifica se o método populate_schedule preenche corretamente as informações
     def test_populate_schedule_success(self):
         ps = ProfessorSchedule(self.valid_data)
         result = ps.populate_schedule()
