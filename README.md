@@ -50,6 +50,6 @@ Os testes incluídos no projeto verificam:
 - Cenários de Falha: A classe lida adequadamente com entradas inválidas e lança os erros apropriados.
 
 ## ✍️ Autores
-Caroliny Abreu
-Fernanda Ellen
-Tiago Giugni
+- Caroliny Abreu
+- Fernanda Ellen
+- Tiago Giugni
