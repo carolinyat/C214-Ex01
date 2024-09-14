@@ -7,7 +7,7 @@ class TestProfessorSchedule(unittest.TestCase):
     def setUp(self):
         # Campos válidos
         self.valid_data = {
-            "nomeDoProfessor": "Renzo",
+            "nomeDoProfessor": "Dr. Renzo",
             "horarioDeAtendimento": "08:00 - 10:00",
             "periodo": "integral",
             "sala": "3"
@@ -38,7 +38,7 @@ class TestProfessorSchedule(unittest.TestCase):
         ps = ProfessorSchedule(self.valid_data)
         result = ps.populate_schedule()
         self.assertEqual(result['predio'], 1)
-        self.assertEqual(result['nomeDoProfessor'], "Renzo")
+        self.assertEqual(result['nomeDoProfessor'], "Dr. Renzo")
         self.assertEqual(result['horarioDeAtendimento'], "08:00 - 10:00")
         self.assertEqual(result['periodo'], "integral")
         self.assertEqual(result['sala'], "3")
@@ -79,7 +79,7 @@ class TestProfessorSchedule(unittest.TestCase):
         }
         ps = ProfessorSchedule(data)
         result = ps.populate_schedule()
-        self.assertEqual(result['nomeDoProfessor'], "Dr. Ana")
+        self.assertEqual(result['nomeDoProfessor'], "Dra. Rosana")
         self.assertEqual(result['horarioDeAtendimento'], "14:00 - 16:00")
         self.assertEqual(result['periodo'], "noturno")
         self.assertEqual(result['sala'], "6")
